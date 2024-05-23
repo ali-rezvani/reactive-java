@@ -1,6 +1,7 @@
 package org.example.common;
 
 import com.github.javafaker.Faker;
+import org.reactivestreams.Subscriber;
 
 import java.util.Locale;
 import java.util.function.Consumer;
@@ -31,5 +32,13 @@ public class Util {
             e.printStackTrace();
 //            throw new RuntimeException(e);
         }
+    }
+
+    public static Subscriber<Object> subscriber(){
+        return new DefaultSubscriber();
+    }
+
+    public static Subscriber<Object> subscriber(String name){
+        return new DefaultSubscriber(name);
     }
 }
