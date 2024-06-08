@@ -7,7 +7,8 @@ import java.util.Locale;
 import java.util.function.Consumer;
 
 public class Util {
-    private static final Faker FAKER=Faker.instance(new Locale("fa","Ir"));
+    private static final Faker FAKER=Faker.instance();
+//    private static final Faker FAKER=Faker.instance(new Locale("fa","Ir"));
 
     public static Consumer<Object> doOnNext(){
         return System.out::println;
